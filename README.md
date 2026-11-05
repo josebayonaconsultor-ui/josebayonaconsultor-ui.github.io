@@ -10,14 +10,14 @@ Sitio web de **José Bayona Investigación y Consultoría** (Ocaña, Norte de Sa
 | --- | --- |
 | `index.html` | La página completa: textos, diseño y funcionamiento. |
 | `noticias.json` | Las notas de la sección «Noticias y lecturas críticas». |
-| `img/` | Fotografías y logotipo, optimizados para carga rápida. |
+| `*.webp`, `*.png` | Fotografías y logotipo, optimizados para carga rápida. |
 
 ## Publicar el sitio (GitHub Pages)
 
 1. En el repositorio, abra **Settings → Pages**.
 2. En **Build and deployment**, elija **Deploy from a branch**.
 3. Seleccione la rama `main` y la carpeta `/ (root)`. Guarde.
-4. En uno o dos minutos el sitio queda público en `https://<usuario>.github.io/jose-bayona/`.
+4. En uno o dos minutos el sitio queda público en `https://<usuario>.github.io/` (si el repositorio se llama `<usuario>.github.io`).
 
 ## Editar en línea desde GitHub
 
@@ -53,7 +53,7 @@ Categorías disponibles: `Investigación`, `Actualidad`, `Pensamiento crítico`,
 
 ### Cambiar una fotografía
 
-Suba la nueva imagen a `img/` con **el mismo nombre** del archivo que reemplaza (por ejemplo, `jose-bayona-inicio.webp`).
+Suba la nueva imagen con **el mismo nombre** del archivo que reemplaza (por ejemplo, `jose-bayona-inicio.webp`).
 
 ## Contacto
 
