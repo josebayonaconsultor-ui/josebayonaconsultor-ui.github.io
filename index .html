@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="author" content="José Andrés Bayona Soto">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<meta property="og:title" content="José Bayona Investigación y Consultoría">
+<meta property="og:description" content="Investigo para comprender. Transfiero para transformar. Análisis financiero, pensamiento crítico y comunicación estratégica desde Ocaña, Norte de Santander.">
+<meta property="og:image" content="jose-bayona-inicio.webp">
+<link rel="icon" href="logo-jb.png">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}</style>
+<title>José Bayona Investigación y Consultoría</title>
+<meta name="description" content="José Bayona Investigación y Consultoría, Ocaña (Norte de Santander). Diagnóstico financiero, estudios sectoriales, pensamiento crítico, formación, comunicación científica y asesoría académica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lora:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<style>
+/* Layout: bandas alternas — noche (estudio gris carbón) y papel gris claro — con tarjetas de cabecera negra y filetes dorados, como las piezas de asesoría */
+:root{
+  --paper:#F4F4F5;      /* bandas claras */
+  --card:#FFFFFF;
+  --ink:#141416;        /* texto principal */
+  --stone:#5F6066;      /* texto secundario */
+  --line:#DCDCDF;
+  --night:#141416;      /* bandas oscuras (iguales en ambos temas) */
+  --night-2:#24252A;
+  --night-fg:#F4F4F5;
+  --night-muted:#B4B5BA;
+  --night-line:#3A3B41;
+  --gold:#C9A24D;       /* acento sobre oscuro */
+  --gold-ink:#7E5F17;   /* acento sobre claro */
+  --head:#141416;       /* cabecera de tarjetas */
+  --head-fg:#FFFFFF;
+  --logo-filter:none;
+  --display:"Montserrat","Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+  --body:"Montserrat","Avenir Next","Segoe UI",Helvetica,Arial,sans-serif;
+  --serif:"Lora","Georgia","Times New Roman",serif;
+  --wrap:1180px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#1B1C1F;--card:#232428;--ink:#EDEDEF;--stone:#A9AAB0;--line:#34353B;
+  --gold-ink:#D6B465;--head:#0E0E10;--logo-filter:invert(1);color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#1B1C1F;--card:#232428;--ink:#EDEDEF;--stone:#A9AAB0;--line:#34353B;
+  --gold-ink:#D6B465;--head:#0E0E10;--logo-filter:invert(1);color-scheme:dark}
+
+[hidden]{display:none!important}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--card)}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--display);margin:0;line-height:1.12;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:16px;top:-60px;background:var(--night);color:#fff;padding:10px 14px;z-index:99}
+.skip:focus{top:12px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:720px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+
+/* bandas */
+.band{padding-block:clamp(56px,8vw,104px)}
+.dark{background:radial-gradient(120% 90% at 20% 0%,var(--night-2) 0%,var(--night) 62%);color:var(--night-fg)}
+.kicker{display:flex;align-items:center;gap:12px;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:14px}
+.kicker::before{content:"";width:34px;height:2px;background:currentColor}
+.dark .kicker{color:var(--gold)}
+.h2{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:800;letter-spacing:-.02em}
+.lede{font-family:var(--serif);font-style:italic;font-size:clamp(1.12rem,1.6vw,1.3rem);color:var(--stone);margin-top:14px;max-width:60ch}
+.dark .lede{color:var(--night-muted)}
+.head-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 56px;align-items:end;margin-bottom:clamp(32px,5vw,52px)}
+.head-row > p{color:var(--stone);max-width:58ch}
+.dark .head-row > p{color:var(--night-muted)}
+@media (max-width:800px){.head-row{grid-template-columns:1fr}}
+
+/* botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;font:600 .95rem/1.2 var(--body);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-gold{background:var(--gold);color:#141416;border-color:var(--gold)}
+.btn-gold:hover{background:transparent;color:var(--gold)}
+.btn-ink{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-ink:hover{background:transparent;color:var(--ink)}
+.btn-ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn-ghost:hover{background:var(--night-fg);color:var(--night);border-color:var(--night-fg)}
+.light .btn-ghost:hover,.btn-ghost.on-light:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+
+/* cabecera */
+.site-head{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--card);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:70px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:42px;width:auto;filter:var(--logo-filter)}
+.brand b{display:block;font:700 .98rem/1.1 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.brand span{display:block;font-size:.76rem;color:var(--stone);margin-top:2px}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:22px}
+.nav a{text-decoration:none;font-size:.88rem;font-weight:500;padding:6px 0;border-bottom:2px solid transparent}
+.nav a:hover{border-bottom-color:var(--gold)}
+.menu-btn{display:none;min-height:44px;padding:0 16px;border-radius:999px;border:1.5px solid var(--ink);background:none;color:var(--ink);font:600 .9rem var(--body);cursor:pointer}
+.head-wa{min-height:42px;padding:8px 18px}
+@media (max-width:1040px){
+  .menu-btn{display:inline-flex;align-items:center}
+  .head-wa{display:none}
+  .nav{position:absolute;left:0;right:0;top:100%;background:var(--card);border-bottom:1px solid var(--line);display:none}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;gap:0;padding:6px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px))}
+  .nav a{display:block;padding:13px 0;border-bottom:1px solid var(--line)}
+}
+@media (max-width:420px){.brand span{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-block:0}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);align-items:end;gap:24px}
+.hero-copy{padding-block:clamp(48px,7vw,96px)}
+.hero-logo{display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.hero-logo img{height:76px;width:auto}
+.hero-logo div{border-left:1.5px solid var(--gold);padding-left:16px}
+.hero-logo b{display:block;font:500 1.35rem/1.1 var(--display);letter-spacing:.08em;text-transform:uppercase}
+.hero-logo span{display:block;font-size:.86rem;color:var(--night-muted);margin-top:4px}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4.4rem);font-weight:800;letter-spacing:-.025em;line-height:1.02}
+.hero h1 .l2{display:block;color:var(--gold)}
+.hero-rule{width:120px;height:2px;background:var(--gold);margin:26px 0}
+.hero-desc{margin-top:22px;font-size:1.06rem;color:var(--night-muted);max-width:46ch}
+.hero .btn-row{margin-top:30px}
+.hero-tag{font-family:var(--serif);font-style:italic;color:var(--night-muted);margin-top:30px;display:flex;align-items:center;gap:14px}
+.hero-tag::before,.hero-tag::after{content:"";height:1px;width:40px;background:var(--night-line)}
+.hero-photo{position:relative;align-self:end}
+.hero-photo img{width:100%;height:auto;border-radius:24px 24px 0 0;-webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent 100%);mask-image:linear-gradient(to bottom,#000 78%,transparent 100%)}
+.hero-photo::before{content:"";position:absolute;inset:8% -10% 0 -10%;background:radial-gradient(closest-side,rgba(201,162,77,.18),transparent 70%);z-index:0}
+.hero-photo img{position:relative;z-index:1}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-copy{padding-bottom:8px}
+  .hero-photo{max-width:440px;margin:0 auto}
+}
+@media (prefers-reduced-motion:no-preference){
+  .hero-copy > *{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+  .hero-copy > *:nth-child(2){animation-delay:.08s}.hero-copy > *:nth-child(3){animation-delay:.16s}
+  .hero-copy > *:nth-child(4){animation-delay:.24s}.hero-copy > *:nth-child(5){animation-delay:.32s}
+  @keyframes rise{from{opacity:.001;transform:translateY(12px)}to{opacity:1;transform:none}}
+}
+
+/* sobre */
+.about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(28px,5vw,64px);align-items:start}
+.portrait{border-radius:22px;overflow:hidden;background:#8f9095;aspect-ratio:3/4;max-width:100%}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.about-body p{margin-top:16px;max-width:64ch}
+.about-body .first{font-size:1.12rem;font-weight:500;margin-top:20px}
+.profiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:28px}
+.profile{display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);text-decoration:none;transition:border-color .2s}
+.profile:hover{border-color:var(--gold-ink)}
+.profile b{font-size:.92rem}
+.profile span{font-size:.78rem;color:var(--stone)}
+@media (max-width:900px){.about{grid-template-columns:1fr}.portrait{max-width:420px}.profiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.mv{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+.mv div{background:var(--card);border-radius:16px;padding:20px 22px;border:1px solid var(--line)}
+.mv h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.mv p{font-size:.94rem;color:var(--stone)}
+@media (max-width:560px){.mv{grid-template-columns:1fr}}
+.thesis{margin-top:28px;padding:22px 24px;border-radius:16px;background:var(--head);color:var(--head-fg);font:700 1.05rem/1.4 var(--display)}
+.thesis span{display:block;color:var(--gold)}
+
+/* método */
+.method{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(28px,5vw,64px);align-items:start}
+.strata{display:grid;gap:12px}
+.stratum{display:grid;grid-template-columns:190px minmax(0,1fr);gap:18px;padding:22px 24px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--night-line)}
+.stratum h3{font-size:1rem;font-weight:700;color:var(--gold);display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.stratum h3 small{display:block;width:100%;font:500 .78rem/1.3 var(--body);color:var(--night-muted);margin-top:4px;text-transform:none;letter-spacing:0}
+.stratum p{color:var(--night-fg);font-size:.97rem}
+@media (max-width:560px){.stratum{grid-template-columns:1fr;gap:6px}}
+.method-photo{border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:#6f7075}
+.method-photo img{width:100%;height:100%;object-fit:cover}
+.quote{margin:22px 0 0;font-family:var(--serif);font-style:italic;font-size:1.08rem;line-height:1.55;color:var(--night-fg)}
+.quote cite{display:block;margin-top:10px;font:600 .82rem var(--body);color:var(--gold);font-style:normal}
+@media (max-width:900px){.method{grid-template-columns:1fr}.method-photo{max-width:380px}}
+.tools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:clamp(40px,6vw,64px)}
+.tool{padding:20px 22px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--night-line)}
+.tool h4{font-size:.98rem;font-weight:700;margin-bottom:6px}
+.tool h4 em{font-style:normal;color:var(--gold)}
+.tool p{font-size:.9rem;color:var(--night-muted)}
+@media (max-width:900px){.tools{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.tools{grid-template-columns:1fr}}
+.saydo{margin-top:clamp(40px,6vw,64px);border-radius:18px;overflow:hidden;border:1px solid var(--night-line)}
+.saydo-row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.saydo-row > *{padding:16px 22px}
+.saydo-row + .saydo-row{border-top:1px solid var(--night-line)}
+.saydo-row .no{color:var(--night-muted);text-decoration:line-through;text-decoration-color:rgba(201,162,77,.6)}
+.saydo-row .yes{background:rgba(255,255,255,.04)}
+.saydo-head{font-size:.76rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.saydo-head .no{text-decoration:none;color:var(--night-muted)}
+@media (max-width:640px){.saydo-row{grid-template-columns:1fr}.saydo-head{display:none}.saydo-row .no{padding-bottom:4px}}
+
+/* modelo de dos alternativas */
+.alts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:clamp(36px,5vw,56px)}
+.alt{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.alt-h{background:var(--head);color:var(--head-fg);padding:18px 24px;display:flex;align-items:center;gap:14px}
+.alt-h svg{width:30px;height:30px;color:var(--gold);flex:none}
+.alt-h h3{font-size:1.15rem;font-weight:700}
+.alt-h p{font-size:.84rem;color:#C9CACE}
+.alt-b{padding:20px 24px 24px}
+.alt-b ul{margin:12px 0 0;padding-left:18px}
+.alt-b li{margin-bottom:4px}
+.alt-b .fit{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:.9rem;color:var(--stone)}
+.alt.prio{border-color:var(--gold-ink)}
+.prio-tag{margin-left:auto;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#141416;background:var(--gold);padding:4px 10px;border-radius:999px;white-space:nowrap}
+@media (max-width:760px){.alts{grid-template-columns:1fr}}
+
+/* líneas */
+.lines{display:grid;gap:14px}
+.line{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.line summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 18px;align-items:center;padding:20px 24px;background:var(--head);color:var(--head-fg)}
+.line summary::-webkit-details-marker{display:none}
+.line-name{font:700 clamp(1.05rem,2vw,1.3rem)/1.2 var(--display)}
+.line-product{grid-column:1;font-size:.86rem;color:var(--gold)}
+.line-toggle{grid-row:1/3;grid-column:2;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--gold);position:relative}
+.line-toggle::before,.line-toggle::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:2px;background:var(--gold);transform:translate(-50%,-50%)}
+.line-toggle::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s}
+.line[open] .line-toggle::after{transform:translate(-50%,-50%)}
+.line-body{padding:24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px 40px}
+.claim{grid-column:1/-1;font-family:var(--serif);font-style:italic;font-size:1.08rem;padding-left:16px;border-left:2px solid var(--gold-ink)}
+.line-body h4{font:700 .8rem/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:6px}
+.line-body p{font-size:.96rem}
+.line-body ul{margin:0;padding-left:18px;font-size:.96rem}
+.line-body li{margin-bottom:3px}
+.ask{margin-top:16px;font-size:.92rem;color:var(--stone)}
+.ask b{color:var(--ink)}
+.deliver{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.deliver div{border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:.93rem}
+.deliver b{display:block;font-size:.86rem;margin-bottom:4px}
+.deliver .d2{background:var(--head);color:var(--head-fg);border-color:var(--head)}
+.deliver .d2 b{color:var(--gold)}
+.line-cta{grid-column:1/-1}
+@media (max-width:760px){.line-body,.deliver{grid-template-columns:1fr}}
+.note{margin-top:22px;font-size:.88rem;color:var(--stone);max-width:80ch}
+
+/* asesoría académica */
+.ase{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(24px,4vw,48px);align-items:end}
+.ase-photo{border-radius:22px;overflow:hidden;aspect-ratio:3/4;background:#8f9095}
+.ase-photo img{width:100%;height:100%;object-fit:cover}
+.ase h2 .sub{display:block;font-size:.58em;font-weight:700;color:var(--stone);margin-top:10px;letter-spacing:-.01em}
+@media (max-width:900px){.ase{grid-template-columns:1fr}.ase-photo{max-width:360px;order:-1}}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.plan{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+.plan-h{background:var(--head);color:var(--head-fg);padding:16px 20px;display:flex;gap:14px;align-items:center}
+.plan-h svg{width:34px;height:34px;color:var(--gold);flex:none;padding-right:12px;border-right:1px solid #4a4b50;box-sizing:content-box}
+.plan-h h3{font-size:1.02rem;font-weight:700;line-height:1.25}
+.plan dl{margin:0;padding:6px 20px 0}
+.plan dl div{display:grid;grid-template-columns:28px minmax(0,1fr);column-gap:14px;row-gap:2px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.plan dl svg{grid-row:1/3}
+.plan dt,.plan dd{grid-column:2}
+.plan dl div:last-child{border-bottom:0}
+.plan dl svg{width:26px;height:26px;color:var(--stone)}
+.plan dt{font-size:.86rem;color:var(--stone)}
+.plan dd{margin:0;font-size:1.02rem;font-weight:700;font-variant-numeric:tabular-nums}
+.plan dd small{font-weight:500;font-size:.86rem;color:var(--stone)}
+.plan .btn{margin:6px 20px 20px}
+@media (max-width:640px){.plans{grid-template-columns:1fr}}
+.benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+.benefit{display:flex;gap:12px;align-items:center;padding:14px 16px;border-radius:14px;background:var(--card);border:1px solid var(--line);font-size:.9rem;font-weight:600;line-height:1.3}
+.benefit svg{width:30px;height:30px;color:var(--gold-ink);flex:none}
+@media (max-width:900px){.benefits{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.disclaimer{margin-top:16px;padding:12px 18px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-family:var(--serif);font-style:italic;font-size:.92rem;color:var(--stone);text-align:center}
+.independent{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:16px;font-family:var(--serif);font-style:italic;color:var(--stone);letter-spacing:.04em}
+.independent::before,.independent::after{content:"";height:1px;width:60px;background:var(--line)}
+
+/* forma de trabajo */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;counter-reset:s}
+.steps li{counter-increment:s;padding:22px 20px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--night-line)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);font-weight:700;margin-bottom:14px}
+.steps h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.steps p{font-size:.9rem;color:var(--night-muted)}
+@media (max-width:1000px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.steps{grid-template-columns:1fr}}
+.which{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:28px 56px;align-items:start}
+.which h3{font-size:1.4rem;font-weight:800}
+.which > div > p{color:var(--night-muted);margin-top:10px}
+.tbl-wrap{overflow-x:auto;border-radius:16px;border:1px solid var(--night-line)}
+.tbl{width:100%;border-collapse:collapse;font-size:.92rem}
+.tbl th,.tbl td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--night-line)}
+.tbl tr:last-child td{border-bottom:0}
+.tbl th{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.tbl td:last-child{white-space:nowrap;font-weight:600}
+@media (max-width:860px){.which{grid-template-columns:1fr}}
+
+
+/* publicaciones */
+.pubs{display:grid;gap:12px}
+.pub{display:grid;grid-template-columns:90px minmax(0,1fr);gap:20px;padding:22px 24px;border-radius:18px;background:var(--card);border:1px solid var(--line)}
+.pub-year{font:800 1.6rem/1 var(--display);color:var(--gold-ink)}
+.pub-title{font-family:var(--serif);font-style:italic;font-size:1.12rem;line-height:1.4}
+.pub-meta{font-size:.9rem;color:var(--stone);margin-top:6px;overflow-wrap:anywhere}
+.pub-meta a{color:var(--ink)}
+@media (max-width:560px){.pub{grid-template-columns:1fr;gap:6px}}
+.more{margin-top:18px}
+
+/* contacto */
+.contact{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(28px,5vw,64px);align-items:center}
+.contact-photo{border-radius:22px;overflow:hidden;aspect-ratio:4/5;background:#6f7075}
+.contact-photo img{width:100%;height:100%;object-fit:cover}
+@media (max-width:860px){.contact{grid-template-columns:1fr}.contact-photo{max-width:380px;order:-1}}
+.channels{list-style:none;margin:26px 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:10px}
+.channels li{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;border:1px solid var(--night-line);background:rgba(255,255,255,.03);min-width:0}
+.channels svg{width:24px;height:24px;color:var(--gold);flex:none}
+.channels div{min-width:0}
+.channels span{display:block;font-size:.76rem;color:var(--night-muted)}
+.channels a,.channels strong{font-weight:600;font-size:.92rem;overflow-wrap:anywhere}
+.channels a{text-decoration:underline;text-decoration-color:rgba(201,162,77,.6);text-underline-offset:3px}
+.copy{margin-left:auto;flex:none;background:none;border:1px solid var(--night-line);color:var(--night-fg);border-radius:999px;padding:5px 12px;font:600 .76rem var(--body);cursor:pointer}
+.copy:hover{border-color:var(--gold)}
+.closing{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--night-fg);margin-top:8px;max-width:52ch}
+
+.foot{background:var(--night);color:var(--night-muted);border-top:1px solid var(--night-line);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));font-size:.86rem}
+.foot-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.foot img{height:48px;width:auto}
+
+/* señales de priming: tres formas fijas para Evidencia, Argumento y Estrategia */
+.g{display:inline-block;width:12px;height:12px;flex:none;background:currentColor}
+.g-e{border-radius:50%}
+.g-a{clip-path:polygon(50% 0,100% 100%,0 100%)}
+.g-s{border-radius:2px;transform:rotate(45deg) scale(.85)}
+.primes{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:520px}
+.primes li{display:grid;gap:2px;padding:14px 14px 12px;border-radius:14px;border:1px solid var(--night-line);background:rgba(255,255,255,.03)}
+.primes .g{color:var(--gold);margin-bottom:8px}
+.primes b{font-size:1rem}
+.primes span{font-size:.8rem;color:var(--night-muted)}
+@media (max-width:420px){.primes{grid-template-columns:1fr}.primes li{grid-template-columns:auto auto 1fr;align-items:center;gap:10px}.primes .g{margin:0}}
+.authority{position:relative;z-index:2;background:var(--night);border-top:1px solid var(--night-line)}
+.authority ul{list-style:none;margin:0;padding-block:16px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:.84rem;color:var(--night-muted)}
+.authority li{display:flex;align-items:center;gap:10px}
+.authority li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.method-text{margin-top:16px;color:var(--night-muted);max-width:60ch}
+.quote{font-weight:500}
+.tools-title{font-size:1.3rem;font-weight:800;margin-top:clamp(40px,6vw,64px)}
+.tools-title + .tools{margin-top:18px}
+.steps-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.steps-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:540px){.steps-4{grid-template-columns:1fr}}
+.protocol{margin-top:28px;padding:22px 24px;border-radius:16px;border:1px solid var(--night-line)}
+.protocol h3{font-size:1.05rem;font-weight:700;margin-bottom:14px}
+.protocol ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;counter-reset:p}
+.protocol li{counter-increment:p;display:flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.05);font-size:.88rem}
+.protocol li::before{content:counter(p);font-weight:700;color:var(--gold)}
+.gates{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.gate{display:flex;gap:18px;align-items:flex-start;padding:26px;border-radius:20px;background:var(--head);color:var(--head-fg);text-decoration:none;transition:transform .2s}
+.gate:hover{transform:translateY(-2px)}
+.gate > svg{width:40px;height:40px;color:var(--gold);flex:none}
+.gate h3{font-size:1.3rem;font-weight:800}
+.gate p{color:#C9CACE;margin-top:6px;font-size:.94rem}
+.gate-go{display:inline-flex;margin-top:14px;padding:8px 16px;border-radius:999px;background:var(--gold);color:#141416;font-weight:700;font-size:.86rem}
+@media (max-width:760px){.gates{grid-template-columns:1fr}}
+.profile-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:24px 48px;margin-top:36px}
+@media (max-width:860px){.profile-grid{grid-template-columns:1fr}}
+.mini{font-size:1.05rem;font-weight:800;margin-bottom:14px}
+.affil{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.affil li{padding:14px 18px;border-radius:14px;background:var(--card);border:1px solid var(--line);display:grid;gap:2px}
+.affil b{font-size:.96rem}
+.affil span{font-size:.86rem;color:var(--stone)}
+.areas{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.areas li{display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.9rem;font-weight:500}
+.areas .g{width:10px;height:10px;color:var(--gold-ink)}
+
+
+.wa-float{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:55;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:12px 18px;border-radius:999px;background:var(--gold);color:#141416;text-decoration:none;font-weight:700;font-size:.92rem;box-shadow:0 6px 20px rgba(0,0,0,.28)}
+.wa-float svg{width:22px;height:22px}
+.wa-float:hover{background:#141416;color:var(--gold)}
+@media (max-width:480px){.wa-float span{display:none}.wa-float{padding:14px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="#inicio" aria-label="José Bayona Investigación y Consultoría, ir al inicio">
+      <img src="logo-jb.png" alt="" width="34" height="42">
+      <div><b>José Bayona</b><span>Investigación y Consultoría</span></div>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav class="nav" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#sobre">Sobre José</a></li>
+        <li><a href="#enfoque">Enfoque</a></li>
+        <li><a href="#servicios">Consultoría</a></li>
+        <li><a href="#forma-de-trabajo">Metodología</a></li>
+        <li><a href="#publicaciones">Perfil investigador</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-ink head-wa" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20conocer%20sus%20servicios%20de%20consultor%C3%ADa%20y%20agendar%20una%20reuni%C3%B3n" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg>WhatsApp</a>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- INICIO -->
+<section class="dark hero" id="inicio" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="hero-logo">
+        <img src="logo-jb-blanco.png" alt="Logotipo JB" width="61" height="76">
+        <div><b>José Bayona</b><span>Investigación y Consultoría</span></div>
+      </div>
+      <h1 id="hero-title">Investigo para comprender. <span class="l2">Transfiero para transformar.</span></h1>
+      <p class="hero-desc">Transferencia de conocimiento científico para el análisis financiero, la comunicación estratégica, la toma de decisiones y la reputación organizacional.</p>
+      <ul class="primes" aria-label="Tres principios del trabajo">
+        <li><i class="g g-e" aria-hidden="true"></i><b>Evidencia</b><span>para decidir</span></li>
+        <li><i class="g g-a" aria-hidden="true"></i><b>Argumento</b><span>para sostener</span></li>
+        <li><i class="g g-s" aria-hidden="true"></i><b>Estrategia</b><span>para comunicar</span></li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="#servicios">Explorar servicios</a>
+        <a class="btn btn-ghost" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20conocer%20sus%20servicios%20de%20consultor%C3%ADa%20y%20agendar%20una%20reuni%C3%B3n" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg>Contactar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="jose-bayona-inicio.webp" alt="José Bayona sonriendo, con traje negro y los brazos cruzados sobre una mesa" width="880" height="1173" fetchpriority="high">
+    </div>
+  </div>
+  <div class="authority">
+    <ul class="wrap">
+      <li>Contador público y magíster en administración</li>
+      <li>Investigador en análisis financiero y pensamiento crítico</li>
+      <li>Consultor en transferencia de conocimiento</li>
+      <li>Ocaña, Norte de Santander, Colombia</li>
+    </ul>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="band" id="sobre" aria-labelledby="sobre-title">
+  <div class="wrap about">
+    <div class="portrait"><img src="jose-bayona-retrato.webp" alt="Retrato de José Bayona sonriendo, con chaqueta y camisa negras" width="760" height="1013" loading="lazy"></div>
+    <div class="about-body">
+      <p class="kicker">Investigador antes que consultor</p>
+      <h2 class="h2" id="sobre-title">Sobre José Bayona</h2>
+      <p class="first">José Andrés Bayona Soto es contador público y magíster en administración. Su punto de entrada no es el de un consultor convencional, sino el de un investigador que transfiere conocimiento especializado.</p>
+      <p>Su trayectoria investigativa se orienta al análisis financiero, organizacional, argumentativo, comunicacional y reputacional de empresas, cooperativas, sectores económicos e instituciones. Ese recorrido no se presenta como simple experiencia de consultoría, sino como conocimiento científico acumulado y transferible.</p>
+      <p>Ese conocimiento acumulado se convierte en informes, diagnósticos, procesos formativos y productos de divulgación para que las organizaciones fortalezcan su capacidad de análisis, decisión, comunicación y rendición de cuentas.</p>
+      <div class="mv">
+        <div><h3>Misión</h3><p>Investigo lo que las organizaciones deciden, comunican y demuestran. Transfiero ese conocimiento para que decidan con evidencia, argumenten con rigor y construyan una reputación que se sostenga.</p></div>
+        <div><h3>Visión</h3><p>Ser referente en investigación y consultoría para organizaciones que eligen la evidencia antes que la opinión, el argumento antes que el discurso y la coherencia antes que la imagen.</p></div>
+      </div>
+      <p class="thesis">No soy un consultor que ocasionalmente investiga. <span>Soy un investigador que convierte conocimiento en estrategia.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- REPUTACIÓN ORGANIZACIONAL -->
+<section class="band dark" id="enfoque" aria-labelledby="enfoque-title">
+  <div class="wrap">
+    <div class="method">
+      <div>
+        <p class="kicker">El eje que integra</p>
+        <h2 class="h2" id="enfoque-title">Reputación organizacional</h2>
+        <p class="lede">El juicio colectivo que los grupos de interés construyen sobre una organización a partir de la coherencia entre lo que decide, lo que comunica y lo que demuestra con evidencia.</p>
+        <p class="method-text">No es imagen ni percepción pasajera: es un activo intangible que se acumula, se erosiona y se recupera según la calidad de sus argumentos y la consistencia de sus actos. Por eso deja de administrarse por intuición y se convierte en un objeto que se investiga, se diagnostica y se gestiona.</p>
+        <div class="strata" style="margin-top:28px">
+          <div class="stratum"><h3><i class="g g-e" aria-hidden="true"></i>Análisis financiero<small>Evidencia</small></h3><p>Aporta el respaldo verificable de lo que la organización afirma: liquidez, endeudamiento, rentabilidad, riesgo y desempeño.</p></div>
+          <div class="stratum"><h3><i class="g g-a" aria-hidden="true"></i>Pensamiento crítico<small>Argumento</small></h3><p>Examina la solidez de los razonamientos institucionales y detecta los sesgos y falacias que debilitan la credibilidad.</p></div>
+          <div class="stratum"><h3><i class="g g-s" aria-hidden="true"></i>Comunicación estratégica<small>Estrategia</small></h3><p>Traduce la evidencia en mensajes legítimos, transparentes y coherentes con los grupos de interés.</p></div>
+        </div>
+      </div>
+      <div>
+        <div class="method-photo"><img src="jose-bayona-enfoque.webp" alt="José Bayona sentado, con traje negro, mirando a la cámara" width="640" height="853" loading="lazy"></div>
+        <p class="quote">La reputación no se declara: se demuestra con evidencia, se sostiene con argumentos y se comunica con estrategia.</p>
+      </div>
+    </div>
+
+    <h3 class="tools-title">Herramientas de pensamiento crítico</h3>
+    <div class="tools" aria-label="Herramientas de pensamiento crítico">
+      <div class="tool"><h4><em>44</em> falacias lógicas</h4><p>Un inventario para detectar razonamientos débiles en informes, memorias y discursos institucionales.</p></div>
+      <div class="tool"><h4><em>10</em> falacias financieras</h4><p>De la cifra única a la proyección lineal: errores frecuentes al leer activos, pasivos, ingresos y resultados.</p></div>
+      <div class="tool"><h4>Sesgos cognitivos</h4><p>Confirmación, anclaje y optimismo: interpretaciones que condicionan una decisión antes de revisar los datos.</p></div>
+      <div class="tool"><h4>Modelos mentales</h4><p>La navaja de Ockham, la de Hanlon y otras herramientas para decidir con menos supuestos y menos prejuicios.</p></div>
+      <div class="tool"><h4>Estructura del argumento</h4><p>Qué se afirma, con qué datos, bajo qué garantía y con qué respaldo, siguiendo a Toulmin y a Weston.</p></div>
+      <div class="tool"><h4>Falsación</h4><p>Buscar lo que podría desmentir una hipótesis antes de aceptarla como explicación, como propone Popper.</p></div>
+    </div>
+
+    <div class="saydo" role="table" aria-label="Cómo se nombra el trabajo">
+      <div class="saydo-row saydo-head" role="row"><span class="no" role="columnheader">No digo</span><span role="columnheader">Digo</span></div>
+      <div class="saydo-row" role="row"><span class="no" role="cell">Realizo diagnósticos financieros.</span><span class="yes" role="cell">Transfiero conocimiento financiero aplicado mediante diagnósticos construidos con evidencia, análisis histórico, interpretación crítica y recomendaciones estratégicas.</span></div>
+      <div class="saydo-row" role="row"><span class="no" role="cell">Dicto capacitaciones.</span><span class="yes" role="cell">Desarrollo procesos formativos derivados de investigación aplicada, diseñados para fortalecer capacidades de análisis, interpretación y decisión.</span></div>
+      <div class="saydo-row" role="row"><span class="no" role="cell">Elaboro informes.</span><span class="yes" role="cell">Construyo productos de conocimiento que organizan evidencia, interpretan patrones y generan lineamientos de mejora para la gestión empresarial e institucional.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTORÍA -->
+<section class="band" id="servicios" aria-labelledby="servicios-title">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <p class="kicker">Modelo de transferencia</p>
+        <h2 class="h2" id="servicios-title">Líneas de consultoría</h2>
+      </div>
+      <p>Cada línea parte de un producto base y se contrata de dos maneras. La diferencia no está en la cantidad de entregables, sino en el nivel de apropiación del conocimiento.</p>
+    </div>
+
+    <div class="alts">
+      <div class="alt">
+        <div class="alt-h"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></svg><div><h3>Consultoría</h3><p>Transferencia documental del conocimiento</p></div></div>
+        <div class="alt-b">
+          <p>Entrega de un producto técnico, ejecutivo o académico derivado de un análisis especializado.</p>
+          <ul><li>Informe financiero o diagnóstico empresarial</li><li>Estudio sectorial o documento de benchmarking</li><li>Análisis de discurso institucional</li><li>Documento de recomendaciones estratégicas</li></ul>
+          <p class="fit">Para organizaciones que requieren un documento para comprender un problema, interpretar evidencia y disponer de recomendaciones aplicables.</p>
+        </div>
+      </div>
+      <div class="alt prio">
+        <div class="alt-h"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-4 3v-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"/><path d="M19 9h1a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1v3l-3-3h-3"/></svg><div><h3>Acompañamiento</h3><p>Transferencia integral con socialización ejecutiva</p></div><span class="prio-tag">Prioritaria</span></div>
+        <div class="alt-b">
+          <p>Incluye todo lo anterior y agrega un proceso de apropiación: explicar, discutir e interpretar los hallazgos con quienes deciden.</p>
+          <ul><li>Informe completo y atlas ejecutivo de resultados</li><li>Presentación institucional y socialización presencial, virtual o híbrida</li><li>Taller de interpretación de hallazgos</li><li>Documento ejecutivo de conclusiones</li></ul>
+          <p class="fit">Un informe comunica resultados; una socialización ejecutiva permite que el conocimiento sea comprendido y apropiado.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lines"><details class="line" id="linea-financiero">
+  <summary><span class="line-name">Análisis financiero estratégico</span><span class="line-product">Diagnóstico Financiero Estratégico JB</span><span class="line-toggle" aria-hidden="true"></span></summary>
+  <div class="line-body">
+    <p class="claim">No entrego únicamente indicadores; transfiero una lectura estratégica de la situación financiera de la organización.</p>
+    <div><h4>Qué necesidad atiende</h4><p>Muchas organizaciones tienen estados financieros, reportes contables e indicadores, pero no una interpretación estratégica de lo que esos datos significan. La dificultad no es la falta de información, sino su lectura, comparación y traducción en decisiones.</p><h4 style="margin-top:16px">A quién se dirige</h4><p>Empresas, cooperativas, emprendimientos, instituciones educativas, organizaciones sociales, entidades solidarias y equipos directivos.</p><p class="ask"><b>Pregunta orientadora:</b> ¿Las decisiones financieras se apoyan en evidencia o en intuiciones?</p></div>
+    <div><h4>Qué actividades comprende</h4><ul><li>Caracterización financiera inicial</li><li>Análisis vertical y horizontal</li><li>Indicadores de liquidez, endeudamiento, rentabilidad, solvencia y desempeño</li><li>Fuentes y usos de recursos</li><li>Tendencias y series temporales</li><li>Z-Altman Score o indicadores de crisis, cuando aplique</li><li>Interpretación estratégica y recomendaciones</li></ul></div>
+    <div class="deliver"><div><b>Consultoría</b>Informe en PDF, matriz de indicadores, síntesis ejecutiva y recomendaciones.</div><div class="d2"><b>Acompañamiento</b>Informe completo, presentación ejecutiva, socialización virtual o presencial, taller de interpretación de indicadores y documento breve de conclusiones.</div></div>
+    <div class="line-cta"><a class="btn btn-ink" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20el%20Diagn%C3%B3stico%20Financiero%20Estrat%C3%A9gico%20JB%20y%20quisiera%20agendar%20una%20reuni%C3%B3n." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg>Consultar este servicio</a></div>
+  </div>
+</details><details class="line" id="linea-sectorial">
+  <summary><span class="line-name">Estudios sectoriales e investigación aplicada</span><span class="line-product">Informe Sectorial y Financiero JB</span><span class="line-toggle" aria-hidden="true"></span></summary>
+  <div class="line-body">
+    <p class="claim">No elaboro reportes descriptivos; construyo evidencia sectorial para orientar decisiones empresariales, académicas e institucionales.</p>
+    <div><h4>Qué necesidad atiende</h4><p>Sin comparación sectorial no es posible saber si un resultado es bueno, débil, atípico o estructural. El estudio ubica a la organización dentro de su contexto competitivo, histórico y territorial.</p><h4 style="margin-top:16px">A quién se dirige</h4><p>Empresas, gremios, cooperativas, universidades, grupos de investigación, programas académicos, cámaras de comercio, entidades públicas y organizaciones territoriales.</p><p class="ask"><b>Pregunta orientadora:</b> ¿Los resultados actuales son competitivos o apenas aceptables?</p></div>
+    <div><h4>Qué actividades comprende</h4><ul><li>Definición del sector o población</li><li>Caracterización empresarial o institucional</li><li>Estructuración y depuración de datos</li><li>Análisis estadístico descriptivo</li><li>Benchmarking financiero</li><li>Clusterización según patrones similares</li><li>Análisis longitudinal o transversal</li></ul></div>
+    <div class="deliver"><div><b>Consultoría</b>Informe sectorial, matriz de datos procesada cuando aplique, síntesis de hallazgos y recomendaciones.</div><div class="d2"><b>Acompañamiento</b>Informe completo, presentación institucional, socialización ejecutiva, diálogo con actores interesados y documento de conclusiones estratégicas.</div></div>
+    <div class="line-cta"><a class="btn btn-ink" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20el%20Informe%20Sectorial%20y%20Financiero%20JB%20y%20quisiera%20agendar%20una%20reuni%C3%B3n." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg>Consultar este servicio</a></div>
+  </div>
+</details><details class="line" id="linea-critico">
+  <summary><span class="line-name">Pensamiento crítico, sesgos y falacias</span><span class="line-product">Laboratorio de Pensamiento Crítico y Transparencia Argumentativa JB</span><span class="line-toggle" aria-hidden="true"></span></summary>
+  <div class="line-body">
+    <p class="claim">No reviso únicamente textos o informes; identifico cómo una organización construye confianza, legitima decisiones y comunica resultados ante sus grupos de interés.</p>
+    <div><h4>Qué necesidad atiende</h4><p>Expresiones como «somos líderes», «crecemos juntos» o «generamos confianza» pueden carecer de evidencia suficiente. El reto no es dejar de comunicar positivamente, sino hacerlo con sustento argumentativo, verificabilidad y claridad.</p><h4 style="margin-top:16px">A quién se dirige</h4><p>Cooperativas, empresas, instituciones públicas, universidades, áreas de comunicaciones, consejos directivos, comités de gestión y organizaciones que producen informes, memorias o reportes de gestión.</p><p class="ask"><b>Pregunta orientadora:</b> ¿Las afirmaciones institucionales están respaldadas por evidencia verificable?</p></div>
+    <div><h4>Qué actividades comprende</h4><ul><li>Revisión de informes, memorias y discursos institucionales</li><li>Identificación de patrones argumentativos</li><li>Detección de falacias y debilidades argumentativas</li><li>Análisis de sesgos de confirmación, anclaje u optimismo</li><li>Lectura de cómo se construyen confianza y legitimidad</li><li>Lineamientos de comunicación basada en evidencia</li></ul></div>
+    <div class="deliver"><div><b>Consultoría</b>Informe de análisis crítico o argumentativo, matriz de hallazgos, clasificación de patrones y recomendaciones.</div><div class="d2"><b>Acompañamiento</b>Informe completo, taller de interpretación, presentación ejecutiva, lineamientos de mejora y documento de conclusiones.</div></div>
+    <div class="line-cta"><a class="btn btn-ink" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20el%20Laboratorio%20de%20Pensamiento%20Cr%C3%ADtico%20y%20Transparencia%20Argumentativa%20JB%20y%20quisiera%20agendar%20una%20reuni%C3%B3n." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg>Consultar este servicio</a></div>
+  </div>
+</details><details class="line" id="linea-formacion">
+  <summary><span class="line-name">Formación ejecutiva y académica</span><span class="line-product">Aula JB Finanzas, Decisión y Pensamiento Crítico</span><span class="line-toggle" aria-hidden="true"></span></summary>
+  <div class="line-body">
+    <p class="claim">No dicto capacitaciones genéricas; diseño experiencias de transferencia para que las personas comprendan, interpreten y apliquen conocimiento especializado.</p>
+    <div><h4>Qué necesidad atiende</h4><p>Muchas capacitaciones transmiten información pero no generan apropiación. El reto no es dictar temas, sino instalar capacidades en problemas concretos.</p><h4 style="margin-top:16px">A quién se dirige</h4><p>Empresas, universidades, programas académicos, cooperativas, gremios, equipos directivos, docentes, estudiantes, semilleros de investigación, emprendedores y profesionales.</p><p class="ask"><b>Pregunta orientadora:</b> ¿El objetivo es sensibilizar, formar o instalar herramientas aplicadas?</p></div>
+    <div><h4>Qué actividades comprende</h4><ul><li>Diagnóstico de la necesidad formativa</li><li>Diseño del contenido y la metodología</li><li>Guías, diapositivas, ejercicios y casos</li><li>Conferencia, taller, seminario, curso o clase aplicada</li><li>Aplicación práctica y discusión crítica</li><li>Síntesis de aprendizajes y conclusiones</li></ul></div>
+    <div class="deliver"><div><b>Capacitación: material</b>Guía formativa, módulo académico, presentación, ejercicios, lectura base o material didáctico.</div><div class="d2"><b>Capacitación: taller o curso</b>Espacio formativo con material de apoyo, memoria de la sesión y conclusiones aplicadas.</div></div>
+    <div class="line-cta"><a class="btn btn-ink" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20el%20Aula%20JB%20Finanzas%2C%20Decisi%C3%B3n%20y%20Pensamiento%20Cr%C3%ADtico%20y%20quisiera%20agendar%20una%20reuni%C3%B3n." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg>Consultar este servicio</a></div>
+  </div>
+</details><details class="line" id="linea-divulgacion">
+  <summary><span class="line-name">Comunicación científica y divulgación</span><span class="line-product">Sala de Comunicación Científica JB</span><span class="line-toggle" aria-hidden="true"></span></summary>
+  <div class="line-body">
+    <p class="claim">No publico contenidos aislados; construyo canales de transferencia para que el conocimiento circule, se comprenda y genere valor.</p>
+    <div><h4>Qué necesidad atiende</h4><p>Mucho conocimiento académico y técnico no llega a quienes podrían usarlo porque permanece en informes extensos o documentos de baja circulación.</p><h4 style="margin-top:16px">A quién se dirige</h4><p>Comunidades académicas, empresas, instituciones, programas de formación, estudiantes y profesionales que necesitan comprender conocimiento técnico en formatos accesibles.</p><p class="ask"><b>Pregunta orientadora:</b> ¿Qué acción se espera después de la divulgación?</p></div>
+    <div><h4>Qué actividades comprende</h4><ul><li>Selección del estudio o hallazgo a divulgar</li><li>Traducción del lenguaje técnico a lenguaje claro</li><li>Diseño narrativo del contenido</li><li>Ebook, boletín, guía, newsletter o artículo corto</li><li>Carruseles, guiones de podcast y diapositivas</li><li>Clase abierta, conferencia o presentación</li></ul></div>
+    <div class="deliver"><div><b>Consultoría</b>Ebook, boletín, guía, newsletter, documento divulgativo, artículo corto o pieza para redes.</div><div class="d2"><b>Acompañamiento</b>Producto principal, guion de podcast, serie de publicaciones, presentación, socialización y documento de conclusiones.</div></div>
+    <div class="line-cta"><a class="btn btn-ink" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20la%20Sala%20de%20Comunicaci%C3%B3n%20Cient%C3%ADfica%20JB%20y%20quisiera%20agendar%20una%20reuni%C3%B3n." target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg>Consultar este servicio</a></div>
+  </div>
+</details></div>
+    <p class="note">Los informes no constituyen auditoría, evaluación jurídica, certificación normativa ni dictamen financiero, salvo que se contraten expresamente con ese alcance. Tienen carácter confidencial cuando la organización así lo requiera.</p>
+  </div>
+</section>
+
+<!-- FORMA DE TRABAJO -->
+<section class="band dark" id="forma-de-trabajo" aria-labelledby="forma-title">
+  <div class="wrap">
+    <div class="head-row">
+      <div><p class="kicker">Ruta de transferencia</p><h2 class="h2" id="forma-title">Metodología en cuatro momentos</h2></div>
+      <p>Cada propuesta se ajusta a las necesidades de la organización. La consultoría recorre los dos primeros momentos; el acompañamiento, los cuatro.</p>
+    </div>
+    <ol class="steps steps-4">
+      <li><h3>Análisis especializado</h3><p>Revisión, organización, clasificación e interpretación de la información.</p></li>
+      <li><h3>Elaboración del informe</h3><p>Documento técnico con resultados, interpretación estratégica y recomendaciones.</p></li>
+      <li><h3>Socialización ejecutiva</h3><p>Presentación de hallazgos, explicación de resultados y diálogo con quienes deciden.</p></li>
+      <li><h3>Cierre de transferencia</h3><p>Conclusiones ejecutivas y recomendaciones para la apropiación institucional.</p></li>
+    </ol>
+    <div class="protocol">
+      <h3>La sesión de socialización</h3>
+      <ol>
+        <li>Apertura institucional</li><li>Contexto del estudio</li><li>Hallazgos principales</li><li>Interpretación estratégica</li><li>Taller de interpretación</li><li>Diálogo ejecutivo</li><li>Cierre de transferencia</li>
+      </ol>
+    </div>
+    <div class="which">
+      <div>
+        <h3>¿Qué alternativa conviene?</h3>
+        <p>Un hallazgo no tiene valor solo porque aparece en el informe. Su valor está en lo que permite comprender, anticipar o mejorar.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table class="tbl">
+          <thead><tr><th scope="col">Situación de la organización</th><th scope="col">Alternativa</th></tr></thead>
+          <tbody>
+            <tr><td>Solo requiere un documento técnico</td><td>Consultoría</td></tr>
+            <tr><td>Tiene un equipo técnico capaz de interpretar el documento</td><td>Consultoría</td></tr>
+            <tr><td>Necesita un producto rápido y delimitado</td><td>Consultoría</td></tr>
+            <tr><td>El informe se presentará ante un comité o una junta</td><td>Acompañamiento</td></tr>
+            <tr><td>El tema es sensible o estratégico</td><td>Acompañamiento</td></tr>
+            <tr><td>Busca instalar capacidades en su equipo</td><td>Acompañamiento</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERFIL INVESTIGADOR -->
+<section class="band" id="publicaciones" aria-labelledby="pub-title">
+  <div class="wrap">
+    <div class="head-row">
+      <div><p class="kicker">Evidencia publicada</p><h2 class="h2" id="pub-title">Perfil investigador</h2></div>
+      <p>La consultoría se apoya en una producción académica verificable. Consulte la trayectoria completa en los dos registros oficiales.</p>
+    </div>
+    <div class="gates">
+      <a class="gate" href="https://scholar.google.com/citations?hl=es&amp;user=gJseD9IAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 6-9 6-9-6z"/><path d="M7 12v4c2.5 2 7.5 2 10 0v-4"/></svg><div><h3>Google Scholar</h3><p>Artículos y documentos ordenados por fecha de publicación, con sus citas.</p><span class="gate-go">Ver producción académica</span></div>
+      </a>
+      <a class="gate" href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000033854" target="_blank" rel="noopener">
+        <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></svg><div><h3>CvLAC · Minciencias</h3><p>Hoja de vida científica: formación, experiencia, proyectos y productos registrados.</p><span class="gate-go">Ver hoja de vida</span></div>
+      </a>
+    </div>
+    <div class="profile-grid">
+      <div>
+        <h3 class="mini">Perfil</h3>
+        <ul class="affil">
+          <li><b>Formación</b><span>Contador público y magíster en administración</span></li>
+          <li><b>Rol</b><span>Investigador y consultor: primero investiga, luego transfiere</span></li>
+          <li><b>Producción</b><span>Artículos científicos, estudios bibliométricos y revisiones sistemáticas</span></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="mini">Áreas temáticas</h3>
+        <ul class="areas">
+          <li><i class="g g-e" aria-hidden="true"></i>Finanzas corporativas y análisis financiero</li>
+          <li><i class="g g-e" aria-hidden="true"></i>Series temporales y estudios sectoriales</li>
+          <li><i class="g g-e" aria-hidden="true"></i>Bibliometría y revisión sistemática</li>
+          <li><i class="g g-s" aria-hidden="true"></i>Economía solidaria y cooperativismo</li>
+          <li><i class="g g-s" aria-hidden="true"></i>Calidad organizacional y responsabilidad social</li>
+          <li><i class="g g-s" aria-hidden="true"></i>Autoexplotación laboral</li>
+          <li><i class="g g-a" aria-hidden="true"></i>Falacias lógicas en narrativas corporativas</li>
+          <li><i class="g g-a" aria-hidden="true"></i>Pensamiento crítico y argumentación</li>
+        </ul>
+      </div>
+    </div>
+    <h3 class="mini" style="margin-top:36px">Publicaciones recientes</h3>
+    <div class="pubs">
+      <article class="pub">
+        <span class="pub-year">2026</span>
+        <div><p class="pub-title">Labor Self-Exploitation: A New Intersectional Categorization to Understand Its Complexity</p>
+        <p class="pub-meta">Bayona Soto, J. A. y Navarro Claro, G. T. <i>The International Journal of Interdisciplinary Organizational Studies</i>. <a href="https://doi.org/10.18848/2324-7649/CGP/A148" target="_blank" rel="noopener">doi.org/10.18848/2324-7649/CGP/A148</a></p></div>
+      </article>
+      <article class="pub">
+        <span class="pub-year">2025</span>
+        <div><p class="pub-title">Financial dynamics and time series: A bibliometric and systematic study of academic production</p>
+        <p class="pub-meta">Bayona Soto, J. A., Torcoroma Navarro Claro, G. y Ascanio Dueñas, D. J. <i>Revista ARACÊ</i>, 7(8), 1–21. <a href="https://doi.org/10.56238/arev7n8-123" target="_blank" rel="noopener">doi.org/10.56238/arev7n8-123</a></p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="band dark" id="contacto" aria-labelledby="contacto-title">
+  <div class="wrap contact">
+    <div>
+      <p class="kicker">Solicite una propuesta</p>
+      <h2 class="h2" id="contacto-title">Contacto</h2>
+      <p class="closing">Indique el tipo de organización, la necesidad principal y la alternativa de interés. Evidencia desde aquí, para aquí.</p>
+      <ul class="channels">
+        <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg><div><span>WhatsApp</span><a href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20conocer%20sus%20servicios%20de%20consultor%C3%ADa%20y%20agendar%20una%20reuni%C3%B3n" target="_blank" rel="noopener">+57 316 498 7081</a></div><button class="copy" type="button" data-copy="+57 316 498 7081">Copiar</button></li>
+        <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><span>Correo</span><strong>josebayonaconsultor@gmail.com</strong></div><button class="copy" type="button" data-copy="josebayonaconsultor@gmail.com">Copiar</button></li>
+        <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-7M12 13c0-2 1.5-3 3-3s2 1 2 3v4"/></svg><div><span>LinkedIn</span><a href="https://www.linkedin.com/in/josebayonaconsultor/" target="_blank" rel="noopener">in/josebayonaconsultor</a></div></li>
+        <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5v.01"/></svg><div><span>Instagram</span><a href="https://www.instagram.com/josebayonaconsultor1/" target="_blank" rel="noopener">@josebayonaconsultor1</a></div></li>
+        <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 6-9 6-9-6z"/><path d="M7 12v4c2.5 2 7.5 2 10 0v-4"/></svg><div><span>Google Scholar</span><a href="https://scholar.google.com/citations?hl=es&amp;user=gJseD9IAAAAJ&amp;view_op=list_works&amp;sortby=pubdate" target="_blank" rel="noopener">Perfil de publicaciones</a></div></li>
+        <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><span>Ubicación</span><strong>Ocaña, Norte de Santander, Colombia</strong></div></li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20conocer%20sus%20servicios%20de%20consultor%C3%ADa%20y%20agendar%20una%20reuni%C3%B3n" target="_blank" rel="noopener"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg>Escribir por WhatsApp</a>
+        <a class="btn btn-ghost" href="https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000033854" target="_blank" rel="noopener">Ver CvLAC</a>
+      </div>
+    </div>
+    <div class="contact-photo"><img src="jose-bayona-contacto.webp" alt="José Bayona sonriendo, con chaqueta negra" width="700" height="933" loading="lazy"></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <img src="logo-jb-blanco.png" alt="Logotipo JB José Bayona" width="38" height="48" loading="lazy">
+    <span>José Bayona Investigación y Consultoría · Ocaña, Norte de Santander, Colombia</span>
+    <span>Investigación aplicada │ Consultoría │ Transferencia de conocimiento</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/573164987081?text=Hola%2C%20Jos%C3%A9.%20Me%20interesa%20conocer%20sus%20servicios%20de%20consultor%C3%ADa%20y%20agendar%20una%20reuni%C3%B3n" target="_blank" rel="noopener" aria-label="Contactar a José Bayona por WhatsApp"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.66 15l-1.3 4.76 4.88-1.28A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-2.9.76.78-2.83-.2-.31A8.2 8.2 0 1 1 12 20.2Zm4.5-6.14c-.25-.12-1.46-.72-1.69-.8-.22-.08-.39-.12-.55.13-.16.24-.63.8-.77.96-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.15.16-.25.24-.41.08-.17.04-.31-.02-.43-.06-.13-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47a.9.9 0 0 0-.65.3c-.23.25-.86.84-.86 2.04 0 1.2.88 2.37 1 2.53.12.17 1.73 2.64 4.2 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.46-.6 1.66-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.47-.29Z"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function(){
+  /* menú */
+  var btn=document.querySelector('.menu-btn'),nav=document.getElementById('menu');
+  function close(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');}
+  btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){close();btn.focus();}});
+
+  /* copiar */
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy');
+      function ok(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar';},1800);}
+      try{navigator.clipboard.writeText(t).then(ok,function(){sel(b)});}catch(e){sel(b);}
+    });
+  });
+  function sel(b){var el=b.parentNode.querySelector('strong,a');if(!el)return;var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Seleccionado';}
+
+})();
+</script>
+</body>
+</html>
